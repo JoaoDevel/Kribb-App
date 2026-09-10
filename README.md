@@ -1,50 +1,38 @@
-# Welcome to your Expo app 👋
+# Kribb
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Real estate app — find and save homes.
 
-## Get started
+---
 
-1. Install dependencies
+## Create
 
-   ```bash
-   npm install
-   ```
+Start a new Expo app (SDK 54):
 
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+https://docs.expo.dev/get-started/create-a-project/
 
 ```bash
-npm run reset-project
+npx create-expo-app@latest Kribb --template default@sdk-54
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## Technologies
 
-To learn more about developing your project with Expo, look at the following resources:
+- **Expo** — app framework (SDK 54)
+- **React Native** — UI
+- **Expo Router** — screens and navigation
+- **NativeWind** — Tailwind styles
+- **Clerk** — login and sign up
+- **TypeScript** — types
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## Features
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- Authentication
+- Sign up / Sign in
+- Home
+- Search
+- Saved
+- Profile
+- Database *(later)*
