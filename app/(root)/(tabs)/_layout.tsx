@@ -1,9 +1,16 @@
+import { useUserStore } from '@/store/userStore';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Tabs } from 'expo-router';
 import { Icon, Label, NativeTabs } from 'expo-router/unstable-native-tabs';
 import { Platform } from 'react-native';
 
+
+
 function AndroidTabs() {
+
+
+  const isAdmin = useUserStore(state => state.isAdmin)
+
   return (
     <Tabs screenOptions={{ headerShown: false }}>
       <Tabs.Screen
@@ -24,6 +31,18 @@ function AndroidTabs() {
           ),
         }}
       />
+      <Tabs.Protected guard={isAdmin}>
+        <Tabs.Screen
+          name="create"
+          options={{
+            title: 'Add',
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="add-circle" size={size} color={color} />
+            ),
+          }}
+        />
+      </Tabs.Protected>
+
       <Tabs.Screen
         name="saved"
         options={{
