@@ -1,22 +1,18 @@
-import { useUserStore } from '@/store/userStore';
-import Ionicons from '@expo/vector-icons/Ionicons';
-import { Tabs } from 'expo-router';
-import { Icon, Label, NativeTabs } from 'expo-router/unstable-native-tabs';
-import { Platform } from 'react-native';
-
-
+import { useUserStore } from "@/store/userStore";
+import Ionicons from "@expo/vector-icons/Ionicons";
+import { Tabs } from "expo-router";
+import { Icon, Label, NativeTabs } from "expo-router/unstable-native-tabs";
+import { Platform } from "react-native";
 
 function AndroidTabs() {
-
-
-  const isAdmin = useUserStore(state => state.isAdmin)
+  const isAdmin = useUserStore((state) => state.isAdmin);
 
   return (
     <Tabs screenOptions={{ headerShown: false }}>
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
+          title: "Home",
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="home" color={color} size={size} />
           ),
@@ -25,7 +21,7 @@ function AndroidTabs() {
       <Tabs.Screen
         name="search"
         options={{
-          title: 'Search',
+          title: "Search",
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="search" color={color} size={size} />
           ),
@@ -35,7 +31,7 @@ function AndroidTabs() {
         <Tabs.Screen
           name="create"
           options={{
-            title: 'Add',
+            title: "Add",
             tabBarIcon: ({ color, size }) => (
               <Ionicons name="add-circle" size={size} color={color} />
             ),
@@ -43,7 +39,7 @@ function AndroidTabs() {
         />
       </Tabs.Protected>
 
-      <Tabs.Screen
+      {/* <Tabs.Screen
         name="saved"
         options={{
           title: 'Saved',
@@ -51,11 +47,11 @@ function AndroidTabs() {
             <Ionicons name="heart" color={color} size={size} />
           ),
         }}
-      />
+      /> */}
       <Tabs.Screen
         name="profile"
         options={{
-          title: 'Profile',
+          title: "Profile",
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="person" color={color} size={size} />
           ),
@@ -89,5 +85,5 @@ function IOSTabs() {
 }
 
 export default function TabLayout() {
-  return Platform.OS === 'android' ? <AndroidTabs /> : <IOSTabs />;
+  return Platform.OS === "android" ? <AndroidTabs /> : <IOSTabs />;
 }

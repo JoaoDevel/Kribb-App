@@ -20,7 +20,7 @@ export default function PropertyCard({
   return (
     <TouchableOpacity
       className="flex-row bg-white rounded-2xl mb-4 overflow-hidden"
-      onPress={() => router.push(`/(root)/property/${property.id})`)}
+      onPress={() => router.push(`/(root)/property/${property.id}`)}
     >
       <Image
         source={{ uri: property.images[0] }}

@@ -17,7 +17,7 @@ export default function FeaturedCard({ property }: { property: Property }) {
         shadowRadius: 12,
         opacity: property.is_sold ? 0.5 : 1,
       }}
-      onPress={() => router.push(`/(root)/property/${property.id})`)}
+      onPress={() => router.push(`/(root)/property/${property.id}`)}
     >
       {/* Image */}
       <Image
